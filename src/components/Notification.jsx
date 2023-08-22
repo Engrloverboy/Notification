@@ -5,17 +5,18 @@ const Notification = (props) => {
   return (
     <EachNotification className="eachnotice">
       <div className="border-center">
-        <div className="flex_notification">
-          <div className="flex_word">
-            <h4>Notifications</h4>
-            <h5>3</h5>
-          </div>
-          <p>Mark all as read</p>
-        </div>
         <div className="all">
-          <img src={props.image} alt="" />
+          <div className="image-div">
+            <img src={props.image} alt="" />
+          </div>
           <div className="right_flex">
-            <p className="name">{props.name}</p>
+            <h4 className="name">{props.name}</h4>
+            <p className="comments">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem sint atque, esse dicta earum veritatis! Voluptate
+              voluptas sequi quo architecto. Voluptate esse accusantium itaque
+              officiis vitae iste aliquam, error facilis.
+            </p>
             <small className="time">{props.time}</small>
           </div>
         </div>
@@ -27,22 +28,45 @@ const Notification = (props) => {
 export default Notification;
 
 let EachNotification = styled.section`
-  background-color: rgb(249, 250, 254);
+  padding: 30px 0;
   .border-center {
     border: 1px;
     max-width: 600px;
     margin: 0 auto;
-    background-color: white;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    // background: hsl(205, 33%, 90%);
     border-radius: 10px;
     padding: 12px;
   }
-  .flex_notification {
-    display: flex;
-    justify-content: space-between;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
   }
-  .flex_word {
+  .all {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    background: hsl(205, 33%, 90%);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .name {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 800;
+  }
+  .time {
+    font-size: 10px;
+    color: hsl(219, 12%, 42%);
+  }
+  .comments {
+    border: 1px solid hsl(205, 33%, 90%);
+    padding: 5px 0;
+    font-size: 10px;
+    color: hsl(219, 12%, 42%);
+    margin: 0;
+    border-radius: 5px;
   }
 `;

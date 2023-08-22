@@ -1,10 +1,10 @@
 import React from "react";
-import Notification from "./components/Notification";
+import Allnotification from "./components/Allnotification";
 
 const App = () => {
   return (
     <div>
-      <Notification />
+      <Allnotification />
     </div>
   );
 };

@@ -13,9 +13,9 @@ const App = () => {
 
 export default App;
 
-// <BrowserRouter>
-//   <Routes>
-//     <Route index element={<Allnotification />} />
-//     <Route path="/testimonial" element={<Alltestimonial />} />
-//   </Routes>
-// </BrowserRouter>
+{/* <BrowserRouter>
+  <Routes>
+    <Route index element={<Allnotification />} />
+    <Route path="/testimonial" element={<Alltestimonial />} />
+  </Routes>
+</BrowserRouter> */}

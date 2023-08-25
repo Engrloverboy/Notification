@@ -27,17 +27,15 @@ const Testimonial = (props) => {
 export default Testimonial;
 
 let EachTestimonial = styled.section`
+  margin: 5px;
   .testimonial-div {
     background-color: hsl(300, 43%, 22%);
     color: hsl(0, 0%, 100%);
-    max-width: 65%;
+    // max-width: 65%;
     border-radius: 5px;
     padding: 10px;
     // transform: scale(1);
     // transition: 0.5s;
-  }
-  &:hover {
-    transform: scaleY(1.5);
   }
   .profile-img img {
     width: 50px;

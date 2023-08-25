@@ -2,10 +2,37 @@ import React from "react";
 import Testimonial from "./Testimonial";
 import styled from "styled-components";
 import Testlist from "../assets/json/dummyData2";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Alltestimonial = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    autoplay: true,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
-    <Word>
+    <Word className="container">
       <div className="product-word">
         <div className="user-words-div">
           <h2>10,000+ of our users love our products.</h2>
@@ -29,14 +56,16 @@ const Alltestimonial = () => {
       </div>
 
       <div className="testimonial-flex">
-        {Testlist.map((testy) => (
-          <Testimonial
-            profile={testy.img}
-            name={testy.name}
-            title={testy.title}
-            bio={testy.word}
-          />
-        ))}
+        <Slider {...settings}>
+          {Testlist.map((testy) => (
+            <Testimonial
+              profile={testy.img}
+              name={testy.name}
+              title={testy.title}
+              bio={testy.word}
+            />
+          ))}
+        </Slider>
       </div>
     </Word>
   );
@@ -45,11 +74,9 @@ const Alltestimonial = () => {
 export default Alltestimonial;
 
 let Word = styled.div`
-  width: 800px;
+  //   width: 800px;
   margin: 0 auto;
-  .testimonial-flex {
-    display: flex;
-  }
+  
   h2 {
     color: hsl(300, 43%, 22%);
   }

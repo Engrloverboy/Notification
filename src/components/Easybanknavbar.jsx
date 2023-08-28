@@ -1,22 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/image/logo.svg";
+import hamburger from "../assets/image/icon-hamburger.svg";
 
 const Easybanknavbar = () => {
   return (
     <Easynavbar>
-      <nav className="container_2">
-        <img src={logo} alt="" />
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Blog</li>
-          <li>Careers</li>
-        </ul>
+      <div className="overflow">
+        <nav className="container_2 container_mobile">
+          <img src={logo} alt="" />
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Blog</li>
+            <li>Careers</li>
+          </ul>
 
-        <button>Request Invite</button>
-      </nav>
+          <button>Request Invite</button>
+
+          <div className="hamburger">
+            <img src={hamburger} alt="" />
+          </div>
+        </nav>
+      </div>
     </Easynavbar>
   );
 };
@@ -45,6 +52,48 @@ let Easynavbar = styled.nav`
       border: 1px;
       background-color: hsl(136, 65%, 51%);
       color: white;
+    }
+  }
+
+  @media (max-width: 911px) {
+    .overflow {
+      overflow: hidden;
+    }
+    nav {
+      position: relative;
+    }
+    nav ul {
+      padding: 10px;
+      display: block;
+      position: absolute;
+      background-color: hsl(233, 8%, 62%);
+      color: white;
+      width: 200px;
+      top: 20px;
+      right: 44px;
+      transform: translateX(300px);
+    }
+
+    .active {
+      transform: translateX(0px);
+    }
+    nav ul li {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      display: none;
+    }
+    .container_mobile {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  }
+
+  @media (min-width: 912px) {
+    .hamburger {
+      display: none;
     }
   }
 `;

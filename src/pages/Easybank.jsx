@@ -4,7 +4,7 @@ import Easybanknavbar from '../components/Easybanknavbar'
 const Easybank = () => {
   return (
     <div>
-        <Easynavbar/>
+        <Easybanknavbar/>
     </div>
   )
 }

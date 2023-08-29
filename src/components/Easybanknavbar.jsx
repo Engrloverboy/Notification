@@ -42,7 +42,14 @@ let Easynavbar = styled.nav`
       justify-content: space-between;
       width: 250px;
       font-size: 12px;
-      color: hsl(233, 8%, 62%);
+    }
+    li{
+        color: hsl(233, 8%, 62%);
+    &:hover {
+        color: hsl(233, 26%, 24%);
+        text-decoration: underline;
+      }
+    }
     }
 
     button {
@@ -52,6 +59,10 @@ let Easynavbar = styled.nav`
       border: 1px;
       background-color: hsl(136, 65%, 51%);
       color: white;
+
+      &:hover {
+        background-color: blue;
+      }
     }
   }
 

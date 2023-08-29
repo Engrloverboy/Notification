@@ -22,3 +22,8 @@ body {
   margin: 0 auto;
   padding: 0 20px 0 20px;
 }
+
+.slick-dots li button:before {
+    font-size: 10px !important;
+    color: blue !important;
+}

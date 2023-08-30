@@ -24,7 +24,7 @@ const TestState = () => {
       <button onClick={DecreaseNumber}>-</button>
       count : <span>{number}</span>
       <button onClick={IncreaseNumber}>+</button>
-      <button onClick={Reset}>Reset</button>
+      <button className="btn" onClick={Reset}>Reset</button>
     </Diversity>
   );
 };
@@ -38,6 +38,12 @@ let Diversity = styled.div`
   }
   button {
     width: 40px;
+    height: 40px;
+    margin: 0 20px;
+    font-size: 20px;
+  }
+  .btn {
+    width: 80px;
     height: 40px;
     margin: 0 20px;
     font-size: 20px;

@@ -29,7 +29,7 @@ const Notification = (props) => {
 export default Notification;
 
 let EachNotification = styled.section`
-  padding: 30px 0;
+  // padding: 30px 0;
   .border-center {
     border: 1px;
     max-width: 600px;

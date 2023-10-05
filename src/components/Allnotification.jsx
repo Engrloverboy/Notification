@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Notification from "./Notification";
 import Notifylist from "../assets/json/dummyData";
 import styled from "styled-components";
 
 const Allnotification = () => {
+  const [searchValue, setSearchValue] = useState("");
+
+  const Filteredcomments = Notifylist.filter(
+    (comment) =>
+      comment.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+      comment.time.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
+  const handleSearchChange = (vendor) => {
+    setSearchValue(vendor.target.value);
+  };
+
   const NotificationNumber = Notifylist.length;
   return (
     <Test>
@@ -15,7 +27,14 @@ const Allnotification = () => {
         <p className="read">Mark all as read</p>
       </div>
 
-      {Notifylist.map((eachnotice) => (
+      <input
+        value={searchValue}
+        type="text"
+        onChange={handleSearchChange}
+        placeholder="Search Names"
+      />
+
+      {Filteredcomments.map((eachnotice) => (
         <Notification
           image={eachnotice.img}
           time={eachnotice.time}
@@ -48,6 +67,7 @@ let Test = styled.div`
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
+    padding-top: 20px;
   }
   .flex_word {
     display: flex;
@@ -65,5 +85,10 @@ let Test = styled.div`
     border-radius: 5px;
     background-color: rgb(12, 52, 117);
     color: white;
+  }
+  input {
+    padding: 5px 15px;
+    margin: 20px 0 20px 49px;
+    width: 565px;
   }
 `;

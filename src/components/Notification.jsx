@@ -11,12 +11,13 @@ const Notification = (props) => {
           </div>
           <div className="right_flex">
             <h4 className="name">{props.name}</h4>
-            <p className="comments">
+            <h4 className="name">{props.name}</h4>
+            {/* <p className="comments">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem sint atque, esse dicta earum veritatis! Voluptate
               voluptas sequi quo architecto. Voluptate esse accusantium itaque
               officiis vitae iste aliquam, error facilis.
-            </p>
+            </p> */}
             <small className="time">{props.time}</small>
           </div>
         </div>

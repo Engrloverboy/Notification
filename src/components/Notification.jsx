@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Notification = (props) => {
+  const Online = true;
+  const TheDataitself = "My first tournament today!";
+  const reaction = "reacted to your request";
+  const message = "followed you";
+  const followed = true;
+
   return (
     <EachNotification className="eachnotice">
       <div className="border-center">
@@ -10,8 +16,13 @@ const Notification = (props) => {
             <img src={props.image} alt="" />
           </div>
           <div className="right_flex">
-            <h4 className="name">{props.name}</h4>
-            <h4 className="name">{props.name}</h4>
+            {/* <h4 className="name">{props.name}</h4> */}
+
+            <h4 className="name">
+              {props.name}{" "}
+              <span> {Online ? reaction + TheDataitself : ""}</span>
+            </h4>
+
             {/* <p className="comments">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatem sint atque, esse dicta earum veritatis! Voluptate

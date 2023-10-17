@@ -7,6 +7,11 @@ const Notifylist = [
     text: "This is a great scene!",
     author: "User123",
     timestamp: "2023-08-18 14:30:00",
+    Online: true,
+    TheDataitself: "My first tournament today!",
+    reaction: true,
+    message: "followed you",
+    followed: true,
     reactions: {
       thumbsUp: 5,
       heart: 3,
@@ -89,6 +94,21 @@ const Notifylist = [
 
   {
     id: 7,
+    img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+    name: "Anna Kim",
+    time: "1m ago",
+    text: "Can't wait to watch this!",
+    author: "ExcitedViewer",
+    timestamp: "2023-08-18 17:30:00",
+    reactions: {
+      thumbsUp: 12,
+      heart: 9,
+      clapping: 3,
+    },
+  },
+
+  {
+    id: 8,
     img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
     name: "Anna Kim",
     time: "1m ago",

@@ -2,36 +2,45 @@ import React from "react";
 import styled from "styled-components";
 
 const Notification = (props) => {
-  const Online = true;
+  const reaction = false;
   const TheDataitself = "My first tournament today!";
-  const reaction = "reacted to your request";
-  const message = "followed you";
+  const textForReaction = "reacted to your recent post";
+  const followedyou = "followed you";
   const followed = true;
 
   return (
     <EachNotification className="eachnotice">
       <div className="border-center">
-        <div className="all">
-          <div className="image-div">
-            <img src={props.image} alt="" />
+        {/* THis condition checks for friends that follow */}
+        {props.followed && (
+          <div className="all" id={props.opened ? "yellowGuy" : ""}>
+            <div className="image-div">
+              <img src={props.image} alt="" />
+            </div>
+            <div className="right_flex">
+              <h4 className="name">
+                {props.name} <span className="reaction">{followedyou}</span>{" "}
+              </h4>
+              <small className="time">{props.time}</small>
+            </div>
           </div>
-          <div className="right_flex">
-            {/* <h4 className="name">{props.name}</h4> */}
+        )}
 
-            <h4 className="name">
-              {props.name}{" "}
-              <span> {Online ? reaction + TheDataitself : ""}</span>
-            </h4>
-
-            {/* <p className="comments">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatem sint atque, esse dicta earum veritatis! Voluptate
-              voluptas sequi quo architecto. Voluptate esse accusantium itaque
-              officiis vitae iste aliquam, error facilis.
-            </p> */}
-            <small className="time">{props.time}</small>
+        {/* THis condition checks for friends that reaction */}
+        {props.reaction && (
+          <div className="all" id={props.opened ? "yellowGuy" : ""}>
+            <div className="image-div">
+              <img src={props.image} alt="" />
+            </div>
+            <div className="right_flex">
+              <h4 className="name">
+                {props.name} <span className="reaction">{textForReaction}</span>{" "}
+                <span className="the_data">{props.TheDataitself}</span>
+              </h4>
+              <small className="time">{props.time}</small>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </EachNotification>
   );
@@ -41,6 +50,15 @@ export default Notification;
 
 let EachNotification = styled.section`
   // padding: 30px 0;
+  .the_data {
+    color: red;
+  }
+  #yellowGuy {
+    background-color: blue;
+  }
+  .reaction {
+    font-weight: 300;
+  }
   .border-center {
     border: 1px;
     max-width: 600px;

@@ -38,7 +38,11 @@ const Allnotification = () => {
         <Notification
           image={eachnotice.img}
           time={eachnotice.time}
+          TheDataitself={eachnotice.TheDataitself}
           name={eachnotice.name}
+          opened={eachnotice.opened}
+          reaction={eachnotice.reaction}
+          followed={eachnotice.followed}
         />
       ))}
 

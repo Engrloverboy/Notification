@@ -43,6 +43,8 @@ const Allnotification = () => {
           opened={eachnotice.opened}
           reaction={eachnotice.reaction}
           followed={eachnotice.followed}
+          privatemessage={eachnotice.privatemessage}
+          online={eachnotice.Online}
         />
       ))}
 

@@ -28,7 +28,7 @@ const Notifylist = [
     text: "I love this part!",
     author: "MovieFan88",
     timestamp: "2023-08-18 15:15:00",
-    Online: true,
+    Online: false,
     TheDataitself: "My first tournament today!",
     reaction: true,
     message: "followed you",

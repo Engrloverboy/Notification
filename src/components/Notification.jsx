@@ -6,16 +6,21 @@ const Notification = (props) => {
   const TheDataitself = "My first tournament today!";
   const textForReaction = "reacted to your recent post";
   const followedyou = "followed you";
-  const followed = true;
+  const online = false;
 
   return (
     <EachNotification className="eachnotice">
       <div className="border-center">
         {/* THis condition checks for friends that follow */}
         {props.followed && (
-          <div className="all" id={props.opened ? "yellowGuy" : ""}>
+          <div
+            className="all"
+            id={props.opened ? "yellowGuy" : ""}
+            onClick={props.opened}
+          >
             <div className="image-div">
               <img src={props.image} alt="" />
+              {props.online ? <span className="am_online"></span> : ""}
             </div>
             <div className="right_flex">
               <h4 className="name">
@@ -31,6 +36,7 @@ const Notification = (props) => {
           <div className="all" id={props.opened ? "yellowGuy" : ""}>
             <div className="image-div">
               <img src={props.image} alt="" />
+              {props.online ? <span className="am_online"></span> : ""}
             </div>
             <div className="right_flex">
               <h4 className="name">
@@ -53,6 +59,32 @@ let EachNotification = styled.section`
   .the_data {
     color: red;
   }
+  .image-div {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    img {
+      width: 50px;
+      height: 50px;
+
+      border-radius: 50%;
+      margin-right: 20px;
+      object-fit: cover;
+    }
+    .am_online {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+    }
+  }
+  .am_online {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    display: inline-block;
+  }
   #yellowGuy {
     background-color: blue;
   }
@@ -68,13 +100,7 @@ let EachNotification = styled.section`
     border-radius: 10px;
     padding: 12px;
   }
-  img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-  }
+
   .all {
     display: flex;
     align-items: center;

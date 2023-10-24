@@ -38,6 +38,7 @@ const Allnotification = () => {
         <Notification
           image={eachnotice.img}
           time={eachnotice.time}
+          online={eachnotice.Online}
           TheDataitself={eachnotice.TheDataitself}
           name={eachnotice.name}
           opened={eachnotice.opened}

@@ -90,7 +90,7 @@ const Notifylist = [
     timestamp: "2023-08-18 14:30:00",
     Online: true,
     TheDataitself: "Opelpoe",
-    reaction: false,
+    reaction: true,
     message: "followed you",
     followed: false,
     reactions: {
@@ -111,6 +111,7 @@ const Notifylist = [
     Online: true,
     TheDataitself: "My first tournament today!",
     reaction: true,
+    privatemessage: true,
     message: "followed you",
     followed: false,
     reactions: {

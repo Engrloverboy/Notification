@@ -6,17 +6,35 @@ import styled from "styled-components";
 const Countries = () => {
   const [country, setCountry] = useState([]);
 
+  const [searchValue, setSearchValue] = useState([]);
+
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       .then((sodiq) => setCountry(sodiq));
   }, []);
 
+  useEffect(() => {
+    fetch("https://restcountries.com/v3.1/all")
+      .then((res) => res.json())
+      .then((sodiq) => setSearchValue(sodiq));
+  }, []);
+
+   const handleSearchChange = (vendor) => {
+     setSearchValue(vendor.target.value);
+   };
+
   return (
-    <div>
-        
+    <section>
+      <div>
+        <input
+          value={searchValue}
+          onChange={handleSearchChange}
+          type="text"
+          placeholder="Search"
+        />
+      </div>
       <AllCards>
-        {/* <h2>Country</h2> */}
         {country.map((countries, index) => (
           <EachCard
             key={index}
@@ -28,7 +46,7 @@ const Countries = () => {
           />
         ))}
       </AllCards>
-    </div>
+    </section>
   );
 };
 
@@ -36,6 +54,7 @@ export default Countries;
 
 let AllCards = styled.section`
   padding: 100px 20px;
+
   img {
     width: 100%;
   }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const EachCard = (props) => {
@@ -7,7 +8,9 @@ const EachCard = (props) => {
       <img src={props.flag} alt="Card" />
 
       <div>
-        <h2>{props.countryName}</h2>
+        <Link to={props.dada}>
+          <h2>{props.countryName}</h2>
+        </Link>
 
         <ul>
           <li>
@@ -29,4 +32,7 @@ export default EachCard;
 
 let ACard = styled.section`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  a{
+    text-decoration: none;
+  }
 `;

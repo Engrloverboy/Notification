@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EachCard from "../components/EachCard";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 // import Notifylist from "../assets/json/dummyData";
 
 const Countries = () => {
@@ -14,11 +15,13 @@ const Countries = () => {
 
   return (
     <div>
-        
       <AllCards>
         {/* <h2>Country</h2> */}
         {country.map((countries, index) => (
           <EachCard
+            // dada="/about/countries.name.common"
+            dada={`/about/${countries.name.common}`}
+            // dada={countries.about.name.common}
             key={index}
             countryName={countries.name.common}
             flag={countries.flags.png}

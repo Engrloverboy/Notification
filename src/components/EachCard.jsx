@@ -32,7 +32,17 @@ export default EachCard;
 
 let ACard = styled.section`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  a{
-    text-decoration: none;
+
+  .country-details {
+    padding: 20px;
+    h2 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    ul {
+      font-size: 14px;
+
+      line-height: 1.5;
+    }
   }
 `;

@@ -7,7 +7,7 @@ const EachCard = (props) => {
     <ACard className="eachCard">
       <img src={props.flag} alt="Card" />
 
-      <div>
+      <div className="country-details">
         <Link to={props.dada}>
           <h2>{props.countryName}</h2>
         </Link>
@@ -32,6 +32,10 @@ export default EachCard;
 
 let ACard = styled.section`
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+  a {
+    text-decoration: none;
+  }
 
   .country-details {
     padding: 20px;

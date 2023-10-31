@@ -15,7 +15,7 @@ const Countries = () => {
     fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
       .then((sodiq) => setCountry(sodiq));
-      setLoading(false)
+    setLoading(false);
   }, []);
 
   const FilteredCountries = country.filter((come) =>
@@ -59,6 +59,7 @@ const Countries = () => {
           ) : (
             FilteredCountries.map((countries, index) => (
               <EachCard
+                dada={`/about/${countries.name.common}`}
                 key={index}
                 countryName={countries.name.common}
                 flag={countries.flags.png}

@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Allnotification from "./components/Allnotification";
 import Easybank from "./pages/Easybank";
-
 import Sectestimonial from "./pages/Sectestimonial";
 import Countries from "./pages/Countries";
 import AboutCountries from "./pages/AboutCountries";
@@ -20,6 +19,7 @@ const App = () => {
         <Route path="/faq" element={<MainFAQC />} />
         {/* <Route path="/faq" element={<AllFAQ />} /> */}
         <Route path="/about/:segun" element={<AboutCountries />} />
+        {/* <Route path="/border" element={<EachBorder />} /> */}
       </Routes>
     </BrowserRouter>
   );

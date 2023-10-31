@@ -8,7 +8,7 @@ const AboutCountries = () => {
       {/* <IndividualCountry /> */}
       <MainFAQC />
     </div>
-  )
-}
+  );
+};
 
-export default AboutCountries
+export default AboutCountries;

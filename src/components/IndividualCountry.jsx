@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import EachBorder from "./EachBorder";
 
 const IndividualCountry = (props) => {
   const { segun } = useParams();
@@ -50,6 +51,7 @@ const IndividualCountry = (props) => {
               Languages: <span>{country?.languages}</span>
             </li> */}
           </ul>
+          <EachBorder/>
         </div>
       </div>
     </ICountry>

@@ -5,6 +5,7 @@ import Easybank from "./pages/Easybank";
 import Sectestimonial from "./pages/Sectestimonial";
 import Countries from "./pages/Countries";
 import AboutCountries from "./pages/AboutCountries";
+import EachBorder from "./components/EachBorder";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/easybank" element={<Easybank />} />
         <Route path="/country" element={<Countries />} />
         <Route path="/about/:segun" element={<AboutCountries />} />
+        <Route path="/border" element={<EachBorder />} />
       </Routes>
     </BrowserRouter>
   );

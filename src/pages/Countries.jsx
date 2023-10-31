@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import EachCard from "../components/EachCard";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import MainFaQ from "./MainFaQ";
 // import Notifylist from "../assets/json/dummyData";
 
 const Countries = () => {
@@ -53,7 +54,7 @@ const Countries = () => {
         </div>
       ) : (
         <AllCards>
-          {FilteredCountries.length === 0 ? (
+          {/* {FilteredCountries.length === 0 ? (
             <div>No results found for the given search.</div>
           ) : (
             FilteredCountries.map((countries, index) => (
@@ -66,7 +67,9 @@ const Countries = () => {
                 washington={countries.capital}
               />
             ))
-          )}
+          )} */}
+
+          <MainFaQ />
         </AllCards>
       )}
     </section>

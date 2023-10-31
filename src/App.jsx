@@ -6,6 +6,8 @@ import Easybank from "./pages/Easybank";
 import Sectestimonial from "./pages/Sectestimonial";
 import Countries from "./pages/Countries";
 import AboutCountries from "./pages/AboutCountries";
+import MainFAQC from "./components/MainFAQC";
+import AllFAQ from "./components/AllFAQ";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
         <Route path="/sectestimonial" element={<Sectestimonial />} />
         <Route path="/easybank" element={<Easybank />} />
         <Route path="/country" element={<Countries />} />
+        <Route path="/faq" element={<MainFAQC />} />
+        {/* <Route path="/faq" element={<AllFAQ />} /> */}
         <Route path="/about/:segun" element={<AboutCountries />} />
       </Routes>
     </BrowserRouter>

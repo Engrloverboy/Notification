@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Pricing from "./Pricing";
+import Tab from "./Tab";
 
 const MainModal = () => {
   const [modal, setModal] = useState(false);
@@ -42,6 +43,8 @@ const MainModal = () => {
           </div>
         </div>
       )}
+
+      <Tab />
     </ShopModal>
   );
 };
@@ -49,41 +52,41 @@ const MainModal = () => {
 export default MainModal;
 
 let ShopModal = styled.section`
-  button {
-    background: blue;
-    color: white;
-    border: 0;
-    padding: 15px 20px;
-  }
-  .black {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
+  // button {
+  //   background: blue;
+  //   color: white;
+  //   border: 0;
+  //   padding: 15px 20px;
+  // }
+  // .black {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   background: rgba(0, 0, 0, 0.5);
+  //   height: 100%;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
+  // }
 
-  .theMain {
-    max-width: 700px;
-    margin: 0 auto;
-    background: white;
-  }
+  // .theMain {
+  //   max-width: 700px;
+  //   margin: 0 auto;
+  //   background: white;
+  // }
 
-  .box {
-    margin-top: 20px;
-    background: rgba(0, 0, 0, 0.5);
-  }
+  // .box {
+  //   margin-top: 20px;
+  //   background: rgba(0, 0, 0, 0.5);
+  // }
 
-  .message-box {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 50%;
-  }
+  // .message-box {
+  //   display: flex;
+  //   justify-content: center;
+  //   position: absolute;
+  //   top: 0;
+  //   background: rgba(0, 0, 0, 0.5);
+  //   width: 100%;
+  //   height: 50%;
+  // }
 `;

@@ -51,7 +51,13 @@ const IndividualCountry = (props) => {
               Languages: <span>{country?.languages}</span>
             </li> */}
           </ul>
-          <EachBorder/>
+
+          <ul>
+            {country.borders.map((country, index) => (
+              <li key={index}>{country}</li>
+            ))}
+          </ul>
+          <EachBorder tolu={country?.borders} />
         </div>
       </div>
     </ICountry>

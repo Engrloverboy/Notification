@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const EachBorder = (props) => {
-  const borders = ["Spain", "Canada", "Mexico"];
+  const tolu = ["Spain", "Canada", "Mexico",8];
   return (
     <AllBorder>
-      {/* <h5>Border Countries:</h5> */}
+      <h5>Border Countries:</h5>
       <ul>
-        {props.borders.map((country) => (
-          <li>{country.borders}</li>
+        {props.tolu.map((country,index) => (
+          <li key={index}>
+            {country}
+          </li>
         ))}
       </ul>
     </AllBorder>

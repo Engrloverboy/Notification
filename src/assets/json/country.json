@@ -145,7 +145,7 @@
     "independent": true,
     "status": "officially-assigned",
     "unMember": true,
-    "currencies": { "EUR": { "name": "Euro", "symbol": "â‚¬" } },
+    "currencies": { "EUR": { "ßname": "Euro", "symbol": "â‚¬" } },
     "idd": { "root": "+4", "suffixes": ["3"] },
     "capital": ["Vienna"],
     "altSpellings": ["AT", "Osterreich", "Oesterreich"],

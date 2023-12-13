@@ -4,7 +4,7 @@ import Spaces from "./Spaces";
 
 const dummyTab = [
   {
-    label: "Spaces",
+    label: "Html",
     content: <Spaces />,
   },
   { label: "CSS", content: "I am CSS" },
